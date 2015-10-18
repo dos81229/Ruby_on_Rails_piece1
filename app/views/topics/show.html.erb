@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>樂團名:</strong>
   <%= @topic.title %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>評論:</strong>
   <%= @topic.description %>
 </p>
 
-<%= link_to 'Edit', edit_topic_path(@topic) %> |
-<%= link_to 'Back', topics_path %>
+<%= link_to '修改名稱', edit_topic_path(@topic) %> |
+<%= link_to '返回', topics_path %>
