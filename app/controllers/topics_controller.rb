@@ -4,7 +4,7 @@ class TopicsController < ApplicationController
   # GET /topics
   # GET /topics.json
   def index
-    @topics = Topic.all
+    @topics = Topic.paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /topics/1
@@ -29,9 +29,9 @@ class TopicsController < ApplicationController
     respond_to do |format|
       if @topic.save
         format.html { redirect_to topics_path, notice: 'Topic was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @topic }
+        format.json { render :show, status: :created, location: @topic }
       else
-        format.html { render action: 'new' }
+        format.html { render :new }
         format.json { render json: @topic.errors, status: :unprocessable_entity }
       end
     end

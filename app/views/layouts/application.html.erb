@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Suggestotron</title>
+  <title>投票！支持樂團人</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% flash.each do |name, msg| %>
-  <div><%= msg %></div>
-  <% end %>
+
+<% flash.each do |name, msg| %>
+    <div><%= msg %></div>
+<% end %>
+
 <%= yield %>
 
 </body>
+
 </html>
