@@ -1,4 +1,4 @@
-以Ruby on Rails 為程式架構寫出來的的成品：
+以Ruby on Rails 為程式架構寫出來的投票成品：
 
 https://fast-eyrie-7365.herokuapp.com/
 
